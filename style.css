@@ -1,0 +1,94 @@
+
+.navbar {
+	background-color: #aaa;
+	height: 100%;
+	width: 100%;
+}
+
+.content {
+	background-color: #ccc;
+	height: 100%;
+}
+ul.nav {
+	list-style-type: none;
+	display: block;
+}
+
+ul.nav a {
+	color: grey;
+}
+
+div.content {
+	padding-top: 30px
+}
+
+.nav-link i{
+	font-size: 12px;
+	float: left;
+	margin-right: 12px;
+	display: inline-block;
+	width: 10px;
+}
+
+.nav {  
+	height: 100%;
+	width: 17%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	padding-left: 50px;
+	background-color: #f3f4f9;
+}
+
+.nav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #818181;
+	display: flex;
+	align-items: center;
+	width: 200PX;
+  /*justify-content: center;*/
+}
+
+/*Right Sidebar*/
+.cornercont{
+	color: gray;
+	margin-top:15px!important;
+}
+.cornericon{
+	color: gray;
+	float: right;
+}
+.userbox{
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	margin-left: 50px;
+	height: 240px;
+	width: 240px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	float: right;
+	justify-content: center;
+}
+
+.name {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 12pt;
+}
+.userphoto {
+  	margin-left: auto;
+  	margin-right: auto;
+	z-index: 0;
+	height: 80%;
+	width: 80%;
+}
+#mail {
+	margin-top: 10px;
+	font-size: 10pt;
+}
+
