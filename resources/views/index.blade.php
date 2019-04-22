@@ -3,12 +3,12 @@
 <head>
 	<title>First Page</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="progress bar.css">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/progress-bar.css') }}">
 	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-	<script src="jQuery-plugin-progressbar.js"></script>
+	<script src="{{ URL::asset('js/jQuery-plugin-progressbar.js') }}"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -17,7 +17,7 @@
       <nav class="">
       	<ul class="nav flex-column">
       		<li><center>
-      			<img src="images/logo (2).png" alt="" width="100px" height="100px">
+      			<img src="{{ URL::asset('images/logo.png') }}" alt="" width="100px" height="100px">
       		</center></li>
       		<li class="nav-item"><a href="#home" class="nav-link"> <i class="fas fa-home mr-3"></i> Home</a></li>
       		<li class="nav-item"><a href="#library" class="nav-link"> <i class="fas fa-book mr-3"></i> Library</a></li>
@@ -39,16 +39,16 @@
     </div>
     <div class="col-md-3 sidebar">
       <div class="cornercont">
-      	<a href='#' class="cornericon"><i class="menu fas fa-bars mr-3"></i></a>
+      	<a href='#' class="cornericon"><i class="message fas fa-envelope mr-3"></i></a>
 		<a href='#' class="cornericon"><i class="bell fas fa-bell mr-3"></i></a>
-		<a href='#' class="cornericon"><i class="message fas fa-envelope mr-3"></i></a>
+		<a href='#' class="cornericon"><i class="menu fas fa-bars mr-3"></i></a>
 	  </div>
 	  <div class="userbox" align="center">
 	  	<div class="progress-bar" id="circle">
         <script type="text/javascript">
             $(".progress-bar").loading();
-        </script>
-        <img src="images/user.png" class="userphoto">
+        </script> 
+        <img src="{{ URL::asset('images/user.png') }}" class="userphoto">
     	</div>
 		<a href="#account" class="name"><b>Ulugbek Mukhamedjanov</b></a>
 		<p id="mail">u.mukhamedjanov@mail.inha.uz</p>
