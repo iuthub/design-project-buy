@@ -19,8 +19,8 @@
           <li><center>
             <img src="{{ URL::asset('images/logo.png') }}" alt="" width="100px" height="100px">
           </center></li>
-          <li class="nav-item"><a href="#home" class="nav-link"> <i class="fas fa-home mr-3"></i> Home</a></li>
-          <li class="nav-item"><a href="#library" class="nav-link"> <i class="fas fa-book mr-3"></i> Library</a></li>
+          <li class="nav-item"><a href="{{ route('posts.index') }}" class="nav-link"> <i class="fas fa-home mr-3"></i> Home</a></li>
+          <li class="nav-item"><a href="{{ route('posts.library') }}" class="nav-link"> <i class="fas fa-book mr-3"></i> Library</a></li>
           <li class="nav-item"><a href="#stack" class="nav-link"> <i class="fab fa-stack-overflow mr-3"></i> IUT Stack</a></li>
           <li class="nav-item"><a href="#coding" class="nav-link"> <i class="fas fa-code mr-3"></i> IUT Coding</a></li>
           <li class="nav-item"><a href="#canteen" class="nav-link"> <i class="fas fa-coffee mr-3"></i> Canteen</a></li>

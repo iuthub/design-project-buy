@@ -17,8 +17,7 @@
 // Route::get('login', function () {
 //     return view('login');
 // });
+Route::get('/', 'PostsController@index')->name("posts.index");
 
-Route::get('/library', 'PostsController@library');
-
-Route::get('/', 'PostController@index');
+Route::get('/library', 'PostsController@library')->name("posts.library");
 
