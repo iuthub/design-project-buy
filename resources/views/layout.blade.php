@@ -54,8 +54,8 @@
         </script> 
         <img src="{{ URL::asset('images/user.png') }}" class="userphoto">
       </div>
-    <a href="#account" class="name"><b>Ulugbek Mukhamedjanov</b></a>
-    <p id="mail">u.mukhamedjanov@mail.inha.uz</p>
+    <a href="#account" class="name"><b>{{ Auth::user()->name }}</b></a>
+    <p id="mail">{{Auth::user()->email}}</p>
     </div>
   </div>
     </div>

@@ -23,5 +23,4 @@ Route::get('/library','HomeController@index')->name("pages.library");
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
