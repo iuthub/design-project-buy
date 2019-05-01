@@ -54,13 +54,13 @@ div.content {
 }
 
 /*Right Sidebar*/
-.cornercont{
-	color: gray;
-	margin-top:15px!important;
-}
 .cornericon{
 	color: gray;
 	float: right;
+    margin-top:15px!important;
+}
+.cornericon:hover{
+    color: gray;
 }
 .userbox{
 	display: flex;

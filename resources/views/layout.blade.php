@@ -19,8 +19,8 @@
           <li><center>
             <img src="{{ URL::asset('images/logo.png') }}" alt="" width="100px" height="100px">
           </center></li>
-          <li class="nav-item"><a href="{{ route('posts.index') }}" class="nav-link"> <i class="fas fa-home mr-3"></i> Home</a></li>
-          <li class="nav-item"><a href="{{ route('posts.library') }}" class="nav-link"> <i class="fas fa-book mr-3"></i> Library</a></li>
+          <li class="nav-item"><a href="{{ route('pages.index') }}" class="nav-link"> <i class="fas fa-home mr-3"></i> Home</a></li>
+          <li class="nav-item"><a href="{{ route('pages.library') }}" class="nav-link"> <i class="fas fa-book mr-3"></i> Library</a></li>
           <li class="nav-item"><a href="#stack" class="nav-link"> <i class="fab fa-stack-overflow mr-3"></i> IUT Stack</a></li>
           <li class="nav-item"><a href="#coding" class="nav-link"> <i class="fas fa-code mr-3"></i> IUT Coding</a></li>
           <li class="nav-item"><a href="#canteen" class="nav-link"> <i class="fas fa-coffee mr-3"></i> Canteen</a></li>
@@ -39,9 +39,13 @@
     </div>
     <div class="col-md-3 sidebar">
       <div class="cornercont">
+          <a href='{{ route('logout') }}' class="cornericon"><i class="menu fas fa-bars mr-3" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"></i></a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
+        <a href='#' class="cornericon"><i class="bell fas fa-bell mr-3"></i></a>
         <a href='#' class="cornericon"><i class="message fas fa-envelope mr-3"></i></a>
-    <a href='#' class="cornericon"><i class="bell fas fa-bell mr-3"></i></a>
-    <a href='#' class="cornericon"><i class="menu fas fa-bars mr-3"></i></a>
     </div>
     <div class="userbox" align="center">
       <div class="progress-bar" id="circle">

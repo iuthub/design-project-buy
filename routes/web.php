@@ -13,11 +13,15 @@
 
 // Route::get('/', function () {
 //     return view('index');
-// });
+// });	
 // Route::get('login', function () {
 //     return view('login');
 // });
-Route::get('/', 'PostsController@index')->name("posts.index");
+Route::get('/','HomeController@index')->name("pages.index");
 
-Route::get('/library', 'PostsController@library')->name("posts.library");
+Route::get('/library','HomeController@index')->name("pages.library");
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
