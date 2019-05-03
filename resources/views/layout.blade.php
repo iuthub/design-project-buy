@@ -55,7 +55,9 @@
         <img src="{{ URL::asset('images/user.png') }}" class="userphoto">
       </div>
     <a href="#account" class="name"><b>{{ Auth::user()->name }}</b></a>
-    <p id="mail">{{Auth::user()->email}}</p>
+      <h6 id="id">{{Auth::user()->Id_number}}</h6>
+      <p id="mail">{{Auth::user()->email}}</p>
+
     </div>
   </div>
     </div>
