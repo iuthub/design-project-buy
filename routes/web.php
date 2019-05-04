@@ -19,7 +19,8 @@
 // });
 Route::get('/','HomeController@index')->name("pages.index");
 
-Route::get('/library','HomeController@index')->name("pages.library");
+Route::get('/library','HomeController@library')->name("pages.library");
+Route::get('/canteen','HomeController@canteen')->name("pages.canteen");
 
 
 Auth::routes();

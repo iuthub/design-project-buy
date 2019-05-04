@@ -11,6 +11,7 @@
   <script src="{{ URL::asset('js/jQuery-plugin-progressbar.js') }}"></script>
 </head>
 <body>
+
   <div class="container-fluid">
   <div class="row">
     <div class="col-md-2 navbar">
@@ -23,7 +24,7 @@
           <li class="nav-item"><a href="{{ route('pages.library') }}" class="nav-link"> <i class="fas fa-book mr-3"></i> Library</a></li>
           <li class="nav-item"><a href="#stack" class="nav-link"> <i class="fab fa-stack-overflow mr-3"></i> IUT Stack</a></li>
           <li class="nav-item"><a href="#coding" class="nav-link"> <i class="fas fa-code mr-3"></i> IUT Coding</a></li>
-          <li class="nav-item"><a href="#canteen" class="nav-link"> <i class="fas fa-coffee mr-3"></i> Canteen</a></li>
+          <li class="nav-item"><a href="{{ route('pages.canteen') }}" class="nav-link"> <i class="fas fa-coffee mr-3"></i> Canteen</a></li>
           <li class="nav-item"><a href="#hub" class="nav-link"> <i class="fab fa-hubspot mr-3"></i> IUT Hub</li></a>
           <li class="nav-item"><a href="#booking" class="nav-link"> <i class="far fa-calendar-check mr-3"></i> Booking</a></li>
           <li class="nav-item"><a href="#lost&found" class="nav-link"> <i class="fab fa-sistrix mr-3"></i> Lost and found</a></li>
@@ -34,8 +35,9 @@
         </ul>
       </nav>
     </div>
+
     <div class="col-md-7 content">
-        @yield('content')      
+      @yield('content')
     </div>
     <div class="col-md-3 sidebar">
       <div class="cornercont">
