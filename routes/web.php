@@ -17,10 +17,17 @@
 // Route::get('login', function () {
 //     return view('login');
 // });
+//Admin
+Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
+    Route::get('/', 'DashboardController@dashboard')->name('admin.index');
+    Route::resource('/category', 'CategoryController', ['as'=>'admin']);
+});
+
 Route::get('/','HomeController@index')->name("pages.index");
 
-Route::get('/library','HomeController@index')->name("pages.library");
-
+Route::get('/library','HomeController@library')->name("pages.library");
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+
