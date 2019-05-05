@@ -18,6 +18,9 @@
 //     return view('login');
 // });
 //Admin
+
+//Route::get('/pages/index/{slug?}', 'BlogController@category')->name('pages.index');
+//Route::get('/blog/article/{slug?}', 'BlogController@article')->name('article');
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);

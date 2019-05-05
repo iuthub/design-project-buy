@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>First Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
@@ -37,7 +38,11 @@
     </div>
 
     <div class="col-md-7 content">
-      @yield('content')
+        @yield('content')
+        {{--<title>@yield('title')</title>--}}
+        {{--<meta name="keywords" content="@yield('meta_keyword')">--}}
+        {{--<meta name="description" content="@yield('meta_description')">--}}
+
     </div>
     <div class="col-md-3 sidebar">
       <div class="cornercont">
@@ -58,6 +63,7 @@
       </div>
     <a href="#account" class="name"><b>{{ Auth::user()->name }}</b></a>
       <h6 id="id">{{Auth::user()->Id_number}}</h6>
+        <a href="{{route('admin.index')}}"><h8>Manage publications</h8></a>
       <p id="mail">{{Auth::user()->email}}</p>
 
     </div>
