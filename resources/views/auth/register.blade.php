@@ -37,7 +37,20 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                            <div class="form-group row">
+                                <label for="Id_number" class="col-md-4 col-form-label text-md-right">{{ __('Id_number') }}</label>
+
+
+                            <div class="col-md-6">
+                                <input id="Id_number" type="text" class="form-control{{ $errors->has('Id_number') ? ' is-invalid' : '' }}" name="Id_number" value="{{ old('Id_number') }}" required autocomplete="Id_number">
+
+                                @if ($errors->has('Id_number'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('Id_number') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            </div>
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -67,6 +80,7 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                        </div>
                         </div>
                     </form>
                 </div>

@@ -21,9 +21,13 @@
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
+    Route::resource('/article', 'ArticleController', ['as'=>'admin']);
 });
 
 Route::get('/','HomeController@index')->name("pages.index");
+
+Route::get('/library','HomeController@library')->name("pages.library");
+Route::get('/canteen','HomeController@canteen')->name("pages.canteen");
 
 Route::get('/library','HomeController@library')->name("pages.library");
 

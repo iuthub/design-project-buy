@@ -29,4 +29,10 @@ class HomeController extends Controller
     {
         return view('pages.library');
     }
+
+    public function canteen()
+    {
+        return view('pages.canteen');
+    }
+
 }
